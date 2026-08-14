@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chi Siamo</title>
+    <title>Calcio Mania</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/style.css">
@@ -41,31 +41,24 @@
         </div>
     </nav>
     
-    <header>
-        <div class="container-fluid header2">
-            <div class="row h-100 justify-content-around align-items-center">
-                <div class="col-6">
-                    <h1 class="text-white text-color text-center">Chi Siamo</h1>
-                    <p class="text-white text-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis quasi magni repellat, facere aperiam cumque consequuntur delectus porro praesentium voluptates omnis nesciunt magnam provident eum est sequi ab pariatur laborum.</p>
-                </div>
-            </div>
-        </div>
-    </header>
-    
     <section>
-        <div class="container userHeight">
-            <div class="row h-100 justify-content-around align-items-center">
-                @foreach ($users as $user)
-                    <div class="col-12 col-md-4">
-                       <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">{{$user['name']}} {{$user['surname']}}</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">{{$user['Ruolo']}}</h6>
-                                <a href="{{route('aboutUsDetail', ['name'=>$user['name']])}}" class="card-link">Leggi di più</a>
-                            </div>
+        <div class="container-fluid article">
+            <div class="row h-100">
+                <div class="row">
+                    <h2 class="display-5 text-white text-center text-color">Tutte le ultime notizie sul Calcio Mercato</h2>
+                </div>
+                @foreach ( $articles as $articles )
+                <div class="col-12 col-md-3">
+                    <div class="card mb-3" style="width: 18rem;">
+                        <img src="{{$articles ['img']}}" class="card-img-top cardImg" alt="logo di "{{'titolo'}}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{$articles['titolo']}}</h5>
+                            <p class="card-text">Articolo di: {{$articles['autore']}}</p>
+                            <a href="{{route('articles.detail',['id'=>$articles['id']])}}" class="btn btn-primary">Leggi di più</a>
                         </div>
                     </div>
-                @endforeach    
+                </div>
+                @endforeach
             </div>
         </div>
     </section>

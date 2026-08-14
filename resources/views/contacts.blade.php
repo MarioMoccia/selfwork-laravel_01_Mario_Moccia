@@ -6,7 +6,7 @@
     <title>Contatti</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/style2.css">
+    <link rel="stylesheet" href="/style.css">
   </head>
 <body>
 
@@ -28,13 +28,21 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/contatti">Contatti</a>
                     </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            I nostri Servizi
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{route('articles.list')}}">Tutti i nostri aggiornamenti sul calcio Mercato</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <header>
-        <div class="container-fluid header">
+        <div class="container-fluid header2">
             <div class="row h-100 justify-content-center gap-4">
                 <div class="col-12 h-25 justify-content-center text-center">
                     <h2 class="text-white text-color display-5 text-center">Contattaci</h2>
