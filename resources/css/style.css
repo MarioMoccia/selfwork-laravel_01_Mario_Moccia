@@ -5,7 +5,7 @@ body {
 /* Home page */
 
 .header {
-    background-image: url(media/Calcio1.jpg);
+    background-image: url(/public/media/Calcio1.jpg);
     height: 75vh;
     background-repeat: no-repeat;
     background-position: center;
@@ -21,7 +21,7 @@ h1 {
 /* Pagina Contatti */
 
 .header2 {
-    background-image: url(media/Calcio2.jpg);
+    background-image: url(/public/media/Calcio2.jpg);
     height: 75vh;
     background-repeat: no-repeat;
     background-position: center;
@@ -52,7 +52,7 @@ h1 {
 }
 
 .article {
-    background-image: url(media/Calcio2.jpg);
+    background-image: url(/public/media/Calcio2.jpg);
     min-height: 100vh;
     background-repeat: no-repeat;
     background-position: center;

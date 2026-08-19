@@ -18,3 +18,8 @@ Route::get('/contatti', function () {
 Route::get('/articles', [ArticleController::class, 'articleslist'])->name('articles.list');
 
 Route::get('/articles/detail/{id}', [ArticleController::class, 'articlesDetail'])->name('articles.detail');
+
+// invio email
+Route::get('/contact-us', [PublicController::class, 'contactUs'])->name('contactUs');
+
+Route::post('/contact-us', [PublicController::class, 'contactSubmit'])->name('contactSubmit');
