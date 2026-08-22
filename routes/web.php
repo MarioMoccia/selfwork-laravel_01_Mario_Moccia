@@ -23,3 +23,9 @@ Route::get('/articles/detail/{id}', [ArticleController::class, 'articlesDetail']
 Route::get('/contact-us', [PublicController::class, 'contactUs'])->name('contactUs');
 
 Route::post('/contact-us', [PublicController::class, 'contactSubmit'])->name('contactSubmit');
+
+
+// Inserimento annunci
+Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
+
+Route::post('/articles/submit', [ArticleController::class, 'store'])->name('articles.submit');
